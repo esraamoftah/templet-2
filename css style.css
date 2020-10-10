@@ -13,7 +13,7 @@ body{
     border-radius: 50%;
     position: relative;
    background-color: #fff;
-    
+    margin:150px auto ;
  box-shadow: inset 0px 0px 10px 0px;
 }
 .clock-num{
@@ -35,9 +35,9 @@ font-size: 20px
     height:44%;
     background:red;
     position: absolute;
-    top:7px;
+    top:6%;
    /* right: calc(50% - 1px);*/
-    right: 149px;
+    right: calc( 50% - 1px);
     transform-origin: bottom center;
     
 }
@@ -55,8 +55,8 @@ font-size: 20px
     height:30%;
     background:green;
     position: absolute;
-     right: 148px; 
-     top:50px;
+    right: calc( 50% - 2px);
+     top:20%;
      transform-origin: bottom center
 
 }
@@ -76,10 +76,10 @@ font-size: 20px
     height:25%;
     background:blue;
     position: absolute;
-     right: 147px; 
-     top:65px;
-     transform-origin: bottom center
-
+    
+     top:25%;
+     transform-origin: bottom center;
+right: calc( 50% - 3px);
 }
 #hour-hand:before{
     content:"";
@@ -98,8 +98,8 @@ font-size: 20px
     height: 10px;
     background: #000;
     position: absolute;
-    top:138px;
-    right: 146.5px;
+    top: calc(50% - 5px);
+    right: calc(50% - 5px);
     
 border-radius: 50%;
     z-index: 2;

@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <title>my page</title>
+        <link rel="stylesheet" href="css%20style.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="clock">
+        <div class="clock-num" id="num-twelve"><span>1</span></div>
+         <div class="clock-num" id="num-one"><span>2</span></div>
+         <div class="clock-num" id="num-two"><span>3</span></div>
+         <div class="clock-num" id="num-three"><span>4</span></div>
+         <div class="clock-num" id="num-four"><span>5</span></div>
+         <div class="clock-num" id="num-five"><span>6</span></div>
+         <div class="clock-num" id="num-eleven"><span>7</span></div>
+         <div class="clock-num" id="num-ten"><span>8</span></div>
+         <div class="clock-num" id="num-nine"><span>9</span></div>
+         <div class="clock-num" id="num-eight"><span>10</span></div>
+         <div class="clock-num" id="num-seven"><span>11</span></div>
+         <div class="clock-num" id="num-six"><span>12</span></div>
+            <div id="second-hand"></div>
+             <div id="min-hand"></div>
+             <div id="hour-hand"></div>
+             <div id="clock-center"></div>
+        </div>  
+        <script>
+         var clockNum =document.getElementsByClassName("clock-num") ;
+            var rotateNum=30;
+       var clockNumspan= document.querySelectorAll(".clock-num span");
+         for(i = 0; i < 12 ;i++){
+           clockNum[i].style.transform= "rotate("+ rotateNum +"deg)";
+             
+             clockNumspan[i].style.transform= "rotate(-"+rotateNum +"deg)";
+             rotateNum +=30;
+
+            
+         }
+        var hoursHand=document.getElementById("hour-hand");
+        var secondsHand=document.getElementById("second-hand");
+        var minutesHand=document.getElementById("min-hand");
+            myclock();
+            function myclock() {
+                var date=new Date();
+                var h=date.getHours();
+                var min=date.getMinutes();
+                var s=date.getSeconds();
+              secondsHand.style.transform = "rotate(" + s * 6 +"deg)";
+           
+             minutesHand.style.transform = "rotate(" +(min * 6 +s/10)+"deg)";  
+              hoursHand.style.transform = "rotate(" +( h * 30+min/2) +"deg)";
+               
+                setTimeout (myclock, 500); 
+            }
+        </script>
+    </body>
+</html>

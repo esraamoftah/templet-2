@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    background: #ddd
+}
+#clock{
+    width: 300px;
+    height: 300px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: relative;
+   background-color: #fff;
+    
+ box-shadow: inset 0px 0px 10px 0px;
+}
+.clock-num{
+    width:20px;
+    position: absolute;
+    height: 50%;
+    top:0;
+    transform-origin: bottom center;
+    right: calc(50% - 10px);
+font-size: 20px
+    
+}
+.clock-num span{
+    position: absolute
+}
+
+#second-hand{
+    width: 2px;
+    height:44%;
+    background:red;
+    position: absolute;
+    top:7px;
+   /* right: calc(50% - 1px);*/
+    right: 149px;
+    transform-origin: bottom center;
+    
+}
+#second-hand:before{
+    content:"";
+    width: 2px;
+    height:20px;
+    background:red;
+    position: absolute;
+    bottom:-20px
+    
+}
+#min-hand{
+    width: 4px;
+    height:30%;
+    background:green;
+    position: absolute;
+     right: 148px; 
+     top:50px;
+     transform-origin: bottom center
+
+}
+
+#min-hand:before{
+    content:"";
+    width: 4px;
+    height:20px;
+    background:green;
+    position: absolute;
+    bottom:-20px
+    
+}
+
+#hour-hand{
+    width: 6px;
+    height:25%;
+    background:blue;
+    position: absolute;
+     right: 147px; 
+     top:65px;
+     transform-origin: bottom center
+
+}
+#hour-hand:before{
+    content:"";
+    width: 6px;
+    height:20px;
+    background:blue;
+    position: absolute;
+    bottom:-20px
+    
+}
+
+
+
+#clock-center{
+    width: 10px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top:138px;
+    right: 146.5px;
+    
+border-radius: 50%;
+    z-index: 2;
+        
+}
